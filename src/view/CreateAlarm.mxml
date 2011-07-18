@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:TitleWindow title="Add Alarm" titleIcon="@Embed('../../icons/bell_add.png')" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%">
+<mx:Script source="CreateAlarmScript.as"/>
+<mx:VBox paddingLeft="5" paddingRight="5" paddingTop="5" y="0" x="0" width="100%">
+<mx:HBox width="100%">
+<mx:Label text="Name" width="50"/>
+<mx:ComboBox selectedIndex="{alarm.taskSelectedIndex}" fontSize="12" dataProvider="{alarm.tasks}" id="cmbTask" width="100%"/>
+</mx:HBox>
+<mx:HBox width="100%">
+<mx:Label text="Time" width="50"/>
+<mx:HBox horizontalGap="1" height="20" width="100%">
+<mx:TextInput textAlign="right" fontSize="12" text="{alarm.hours}" id="txtHours" width="30"/>
+<mx:Label textAlign="center" text=":" height="20"/>
+<mx:TextInput textAlign="right" fontSize="12" text="{alarm.minutes}" id="txtMinutes" width="30"/>
+<mx:Label height="10" y="0" width="10" x="110"/>
+<mx:Canvas width="100%">
+<mx:CheckBox label="select date" selected="{alarm.isDateSelected}" click="toggleDateEnabled()" textRollOverColor="#ff00ff" id="chkDateEnabled" width="100"/>
+<mx:DateField fontSize="12" formatString="YYYY/MM/DD" text="{alarm.dateString}" id="txtDate" y="0" x="20" width="100"/>
+</mx:Canvas>
+</mx:HBox>
+</mx:HBox>
+<mx:HBox width="100%">
+<mx:Label width="50"/>
+<mx:CheckBox label="OneTimeOnly" fontSize="12" selected="{alarm.oneTimeOnly}" textRollOverColor="#ff00ff" id="chkOneTimeOnly"/>
+</mx:HBox>
+<mx:HBox width="100%">
+<mx:Label text="Sound" width="50"/>
+<mx:ComboBox selectedIndex="{alarm.mp3SelectedIndex}" fontSize="12" dataProvider="{alarm.sounds}" id="cmbSound" width="150"/>
+<mx:LinkButton label="test" click="callSound()"/>
+</mx:HBox>
+</mx:VBox>
+<mx:ControlBar horizontalAlign="center" paddingLeft="5" paddingRight="5" paddingBottom="5" paddingTop="5" width="100%">
+<mx:Button label="OK" fontSize="14" click="ok()"/>
+<mx:Button label="CANCEL" fontSize="12" click="cancel()"/>
+</mx:ControlBar>
+</mx:TitleWindow>

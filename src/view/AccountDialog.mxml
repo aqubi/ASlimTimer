@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:TitleWindow titleIcon="@Embed('../../icons/user.png')" borderAlpha="0.7" title="Setting" layout="vertical" xmlns:mx="http://www.adobe.com/2006/mxml">
+<mx:Script source="AccountDialogScript.as"/>
+<mx:HBox>
+<mx:VBox horizontalAlign="right" verticalGap="2">
+<mx:Label text="Email" fontSize="12" height="26"/>
+<mx:Label text="Password" fontSize="12" height="20"/>
+<mx:Label height="82"/>
+<mx:Label text="WindowFit" fontSize="12" height="20"/>
+<mx:Label text="Theme" fontSize="12" height="20"/>
+<mx:Label text="Notification" fontSize="12" height="20"/>
+</mx:VBox>
+<mx:VBox id="panel" verticalGap="2" width="250" y="75" x="118" height="100%">
+<mx:TextInput text="{ASlimTimer.ST_USER.email}" fontSize="14" id="txtEmail" width="100%" y="20" x="70" height="26"/>
+<mx:TextInput text="{ASlimTimer.ST_USER.password}" fontSize="12" id="txtPassword" displayAsPassword="true" width="100%" y="98" x="124" height="20"/>
+<mx:CheckBox fontSize="11" textRollOverColor="#ff00ff" id="chkStartAtLogin" label="@Resource(key='StartAtLogin', bundle='aslimtimer')" textAlign="left" selected="{ASlimTimer.ST_SETTING.startAtLogin}" verticalGap="0" height="15"/>
+<mx:CheckBox fontSize="11" textRollOverColor="#ff00ff" id="chkAlwaysInFront" label="@Resource(key='AlwaysInFront', bundle='aslimtimer')" textAlign="left" selected="{ASlimTimer.ST_SETTING.alwaysInFront}" verticalGap="0" width="100%" height="15"/>
+<mx:CheckBox fontSize="11" textRollOverColor="#ff00ff" id="chkIdleCheck" label="@Resource(key='IdleCheck', bundle='aslimtimer')" textAlign="left" selected="{ASlimTimer.ST_SETTING.idleCheck}" verticalGap="0" width="100%" height="15"/>
+<mx:CheckBox fontSize="11" textRollOverColor="#ff00ff" id="chkSmallWindow" label="@Resource(key='SmallWindow', bundle='aslimtimer')" selected="{ASlimTimer.ST_SETTING.smallWindowWhenTaskStart}" verticalGap="0" width="100%" height="15"/>
+<mx:CheckBox fontSize="11" textRollOverColor="#ff00ff" id="chkTodaySum" label="@Resource(key='TodaySum', bundle='aslimtimer')" textAlign="left" selected="{ASlimTimer.ST_SETTING.todaySumTime}" verticalGap="0" width="100%" height="15"/>
+<mx:ComboBox fontSize="12" id="cmbWindowFit" selectedIndex="{ASlimTimer.ST_SETTING.windowFit}" dataProvider="{ASlimTimer.ST_SETTING.windowFits}" width="200" y="0" x="0" height="20"/>
+<mx:ComboBox fontSize="12" id="cmbTheme" selectedIndex="{ASlimTimer.ST_SETTING.theme}" dataProvider="{ASlimTimer.ST_SETTING.colors}" width="200" height="20"/>
+<mx:HBox width="200%" height="20">
+<mx:Label text="@Resource(key='NfAlert1', bundle='aslimtimer')" height="20"/>
+<mx:TextInput text="{ASlimTimer.ST_SETTING.nfAlert}" change="nfValidate(txtNfAlert)" id="txtNfAlert" textAlign="right" width="40" height="20"/>
+<mx:Label text="@Resource(key='NfAlert2', bundle='aslimtimer')" height="20"/>
+</mx:HBox>
+<mx:HBox width="100%" height="20">
+<mx:Label text="@Resource(key='NfWarning1', bundle='aslimtimer')" height="20"/>
+<mx:TextInput text="{ASlimTimer.ST_SETTING.nfWarning}" change="nfValidate(txtNfWarning)" id="txtNfWarning" textAlign="right" width="40" height="20"/>
+<mx:Label text="@Resource(key='NfWarning2', bundle='aslimtimer')" height="20"/>
+</mx:HBox>
+<mx:HBox width="100%" height="20">
+<mx:Label text="@Resource(key='NfConfirm1', bundle='aslimtimer')" height="20"/>
+<mx:TextInput text="{ASlimTimer.ST_SETTING.nfConfirm}" change="nfValidate(txtNfConfirm)" id="txtNfConfirm" textAlign="right" width="40" height="20"/>
+<mx:Label text="@Resource(key='NfConfirm2', bundle='aslimtimer')" height="20"/>
+</mx:HBox>
+</mx:VBox>
+</mx:HBox>
+<mx:ControlBar horizontalAlign="center" width="100%">
+<mx:Button fontSize="14" id="btnSave" click="ok()" label="Save"/>
+<mx:Button fontSize="12" click="cancel()" label="Cancel"/>
+</mx:ControlBar>
+</mx:TitleWindow>

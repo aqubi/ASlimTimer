@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:TitleWindow layout="absolute" title="TodayReport" alpha="0.7" xmlns:mx="http://www.adobe.com/2006/mxml" height="300" width="400">
+<mx:Script source="TodayReportScript.as"/>
+<mx:TextArea text="{text}" id="body" alpha="0.5" y="0" x="0" height="100%" width="100%"/>
+<mx:ControlBar height="50" y="80" width="230" x="10">
+<mx:Button label="Close" click="onClose()" id="btnClose"/>
+</mx:ControlBar>
+</mx:TitleWindow>

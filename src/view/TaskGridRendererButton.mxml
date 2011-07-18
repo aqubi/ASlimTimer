@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:HBox horizontalGap="3" xmlns:mx="http://www.adobe.com/2006/mxml">
+<mx:Script source="TaskGridRendererButtonScript.as"/>
+<mx:LinkButton toolTip="start" paddingRight="0" icon="@Embed('../../icons/clock_play.png')" id="btnStart" click="onStart()" height="20" width="20"/>
+<mx:LinkButton paddingLeft="0" click="onEdit()" toolTip="edit" paddingRight="0" icon="@Embed('../../icons/pencil.png')" id="btnEdit" height="20" width="20"/>
+<mx:LinkButton paddingLeft="0" click="onCompleted()" toolTip="complete" paddingRight="0" icon="@Embed('../../icons/accept.png')" id="btnComplete" height="20" width="20"/>
+<mx:LinkButton paddingLeft="0" click="onDelete()" toolTip="delete" paddingRight="0" icon="@Embed('../../icons/delete.png')" id="btnDelete" height="20" width="20"/>
+</mx:HBox>

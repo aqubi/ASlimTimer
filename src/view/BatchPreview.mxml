@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:TitleWindow layout="vertical" borderThicknessRight="2" title="Batch Entry Preview" color="#000000" alpha="1.0" xmlns:mx="http://www.adobe.com/2006/mxml" verticalGap="1" borderThicknessLeft="2">
+<mx:Script source="BatchPreviewScript.as"/>
+<mx:HBox verticalGap="0" width="100%">
+<mx:Label fontStyle="italic" text="{selectedDate.toLocaleDateString()}" id="lblDate" width="100%"/>
+</mx:HBox>
+<mx:DataGrid paddingLeft="0" paddingBottom="1" dataProvider="{timeEntries}" fontSize="9" columnCount="5" paddingTop="1" id="tblPreview" height="100%" width="100%" change="onSelectionChanged()">
+<mx:columns><mx:DataGridColumn dataField="status" headerText="Status" width="45"/>
+<mx:DataGridColumn dataField="task" headerText="TaskName" width="100"/>
+<mx:DataGridColumn dataField="startTimeString" headerText="Start" width="45"/>
+<mx:DataGridColumn dataField="endTimeString" headerText="End" width="45"/>
+<mx:DataGridColumn dataField="comments" headerText="Comment" width="100"/>
+</mx:columns>
+</mx:DataGrid>
+<mx:Text id="txtMessage" height="15" width="100%"/>
+<mx:ControlBar horizontalAlign="center" width="100%">
+<mx:Button label="UPDATE" fontSize="14" click="onOk()" id="btnUpdate"/>
+<mx:Button label="CANCEL" fontSize="12" click="onCancel()"/>
+</mx:ControlBar>
+</mx:TitleWindow>

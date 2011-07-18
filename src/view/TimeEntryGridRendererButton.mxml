@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:HBox horizontalGap="3" xmlns:mx="http://www.adobe.com/2006/mxml">
+<mx:Script source="TimeEntryGridRendererButtonScript.as"/>
+<mx:LinkButton paddingLeft="0" click="onEdit()" paddingRight="0" icon="@Embed('../../icons/pencil.png')" textDecoration="underline" color="#0080ff" id="btnEdit" toolTip="edit" y="0" x="0" height="20" width="20"/>
+<mx:LinkButton paddingLeft="0" click="onDelete()" paddingRight="0" icon="@Embed('../../icons/delete.png')" textDecoration="underline" color="#ff6666" id="btnDelete" toolTip="delete" y="0" x="50" height="20" width="20"/>
+</mx:HBox>

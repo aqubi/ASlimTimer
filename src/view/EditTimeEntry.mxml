@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:TitleWindow title="Edit TimeEntry" titleIcon="@Embed('../../icons/clock_edit.png')" xmlns:mx="http://www.adobe.com/2006/mxml">
+<mx:Script source="EditTimeEntryScript.as"/>
+<mx:VBox paddingLeft="5" paddingRight="5" paddingBottom="2" paddingTop="2" verticalGap="3" id="taskEntryPanel" y="0" x="0" height="250" width="100%">
+<mx:HBox horizontalGap="3" width="100%">
+<mx:VBox verticalScrollPolicy="off" verticalAlign="middle" verticalGap="0" height="100%" width="100">
+<mx:Text fontWeight="bold" text="{timeEntry.task.name}" width="100%"/>
+</mx:VBox>
+<mx:VBox verticalGap="1">
+<mx:HBox width="100%">
+<mx:VBox verticalGap="0" width="90">
+<mx:Label text="StartTime"/>
+<mx:DateField selectedDate="{timeEntry.startTime}" fontSize="9" formatString="YYYY/MM/DD" id="dtStartDate" change="checkStartDate()" height="18" width="100%"/>
+<mx:TextInput fontSize="9" text="{timeEntry.startTimeString}" id="txtStartTime" change="checkStartTime()" height="18" width="100%"/>
+</mx:VBox>
+<mx:VBox verticalGap="0" width="90">
+<mx:Label text="EndTime"/>
+<mx:DateField selectedDate="{timeEntry.endTime}" fontSize="9" id="dtEndDate" change="checkEndDate()" height="18" width="100%"/>
+<mx:TextInput fontSize="9" text="{timeEntry.endTimeString}" id="txtEndTime" change="checkEndTime()" height="18" width="100%"/>
+</mx:VBox>
+<mx:VBox verticalGap="0">
+<mx:Label text="Duration"/>
+<mx:Label textAlign="right" text="{timeEntry.durationInSeconds}" id="txtDurationInSeconds" width="50"/>
+</mx:VBox>
+</mx:HBox>
+</mx:VBox>
+</mx:HBox>
+<mx:VBox verticalGap="0" width="100%">
+<mx:Label text="Tags"/>
+<mx:TextInput fontSize="12" text="{timeEntry.tags}" id="txtTags" width="100%"/>
+</mx:VBox>
+<mx:VBox verticalGap="0" width="100%">
+<mx:Label text="Comments"/>
+<mx:TextArea fontSize="12" text="{timeEntry.comments}" id="txtComments" y="10" x="0" height="80" width="100%"/>
+</mx:VBox>
+<mx:VBox/>
+<mx:CheckBox label="InProgress" selected="{timeEntry.inProgress}" id="chkInProgress" width="100%"/>
+</mx:VBox>
+<mx:ApplicationControlBar horizontalAlign="center" dock="true" verticalAlign="middle" paddingBottom="5" y="190" x="0" height="35" width="100%">
+<mx:Button label="OK" click="onButtonUpdate()" id="btnUpdate" y="0" x="10" height="22" width="50"/>
+<mx:Button label="CANCEL" click="onButtonCancel()" id="btnCancel" y="0" x="60" height="22" width="70"/>
+</mx:ApplicationControlBar>
+</mx:TitleWindow>

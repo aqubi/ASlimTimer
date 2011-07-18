@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:TitleWindow layout="vertical" paddingLeft="1" title="Add Task" paddingRight="1" titleIcon="@Embed('../../icons/book.png')" paddingBottom="1" xmlns:mx="http://www.adobe.com/2006/mxml" paddingTop="1">
+<mx:Script source="CreateTaskScript.as"/>
+<mx:HBox width="300">
+<mx:Label text="Name" height="20" y="99" width="50" x="20"/>
+<mx:TextInput fontSize="14" id="txtName" width="100%"/>
+</mx:HBox>
+<mx:HBox width="300">
+<mx:Label text="Tags" height="20" y="118" width="50" x="58"/>
+<mx:TextInput fontSize="14" id="txtTags" width="100%"/>
+</mx:HBox>
+<mx:ControlBar horizontalAlign="center" paddingLeft="5" paddingRight="5" paddingBottom="5" paddingTop="5" width="100%">
+<mx:Button label="OK" fontSize="14" click="ok()"/>
+<mx:Button label="CANCEL" fontSize="12" click="cancel()"/>
+</mx:ControlBar>
+</mx:TitleWindow>

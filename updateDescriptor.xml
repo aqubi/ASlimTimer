@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<update xmlns="http://ns.adobe.com/air/framework/update/description/1.0">
+  <version>1.1.11</version>
+  <url>http://www.assembla.com/spaces/ASlimTimer/documents/d5JKS0JqWr37UKeJe5cbCb/download/aslimtimer-1.1.11.air</url>
+  <description><![CDATA[New version includes:
+    * オフライン時に追加したTask/TimeEntryが上手く更新できない場合がある件について修正
+    * 通知表示の変更
+    * Refresh時に同期も同時に行うように修正
+    ]]></description>
+</update>

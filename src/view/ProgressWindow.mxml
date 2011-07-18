@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:TitleWindow layout="absolute" xmlns:mx="http://www.adobe.com/2006/mxml" alpha="0.7" width="200">
+<mx:ProgressBar id="progress" labelPlacement="bottom" minimum="0" visible="true" width="100%"/>
+</mx:TitleWindow>

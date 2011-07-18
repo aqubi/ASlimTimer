@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:TitleWindow layout="vertical" title="Network Mode Setting" xmlns:mx="http://www.adobe.com/2006/mxml">
+<mx:Script source="NetworkDialogScript.as"/>
+<mx:RadioButtonGroup id="mode"/>
+<mx:VBox verticalGap="3" id="panel">
+<mx:HBox horizontalGap="3">
+<mx:Image source="@Embed('../../icons/transmit_blue.png')"/>
+<mx:RadioButton label="Online" fontSize="14" groupName="mode" textRollOverColor="#ff0080" id="rdoOnline" width="150" value="0"/>
+</mx:HBox>
+<mx:HBox horizontalGap="3">
+<mx:Image source="@Embed('../../icons/transmit_delete.png')"/>
+<mx:RadioButton label="Offline" fontSize="14" groupName="mode" textRollOverColor="#ff0080" id="rdoOffline" width="150" value="1"/>
+</mx:HBox>
+<mx:HBox horizontalGap="3">
+<mx:Image source="@Embed('../../icons/wand.png')"/>
+<mx:RadioButton label="AutoDetection" fontSize="14" groupName="mode" textRollOverColor="#ff0080" id="rdoAuto" width="150" value="2"/>
+</mx:HBox>
+</mx:VBox>
+<mx:ControlBar horizontalAlign="center" width="100%">
+<mx:Button label="Save" fontSize="14" click="ok()" id="btnSave"/>
+<mx:Button label="Cancel" fontSize="12" click="cancel()"/>
+</mx:ControlBar>
+</mx:TitleWindow>

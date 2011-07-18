@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:Window title="SlimTimer" alwaysInFront="true" alpha="0.7" xmlns:mx="http://www.adobe.com/2006/mxml" height="500" width="500" layout="absolute">
+<mx:VBox height="100%" y="0" width="100%" x="0">
+<mx:HTML location="http://slimtimer.com/edit" height="100%" y="43" width="100%" x="0"/>
+</mx:VBox>
+</mx:Window>

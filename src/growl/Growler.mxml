@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mx:Window showTitleBar="false" visible="false" borderThickness="0" addedToStage="onAddToStage()" windowComplete="onWindowComplete()" cornerRadius="5" transparent="true" horizontalScrollPolicy="off" showStatusBar="false" title="growler" showGripper="false" systemChrome="none" alwaysInFront="true" verticalScrollPolicy="off" titleAlignment="left" show="onShow()" layout="absolute" xmlns:mx="http://www.adobe.com/2006/mxml" backgroundAlpha="0" width="300" height="100%">
+<mx:Script source="GrowlerScript.as"/>
+<mx:HBox verticalAlign="middle" verticalGap="0" click="closeGrowler()" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+<mx:Box borderThickness="1" cornerRadius="10" id="box" paddingBottom="2" paddingLeft="2" verticalGap="0" paddingTop="2" alpha="0.75" fontWeight="bold" buttonMode="false" borderStyle="solid" paddingRight="2" fontSize="12" focusEnabled="false" borderColor="#ffffff" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+<mx:Label id="lblTitle" text="{messageTitle}"/>
+<mx:HBox verticalAlign="bottom" paddingBottom="0" paddingLeft="5" verticalGap="0" paddingTop="0" horizontalGap="1" verticalScrollPolicy="off" horizontalScrollPolicy="off">
+<mx:Text id="txtMessage" text="{message}" textAlign="right" fontSize="14" fontWeight="bold"/>
+<mx:Label text="@Resource(key='NfPassed', bundle='aslimtimer')" fontSize="9"/>
+</mx:HBox>
+</mx:Box>
+</mx:HBox>
+</mx:Window>
